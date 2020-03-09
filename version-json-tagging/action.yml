@@ -1,0 +1,5 @@
+name: 'version json tagging'
+description: 'create tag using version from version.json'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
