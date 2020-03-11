@@ -10,6 +10,11 @@ COPY go.* /project/
 COPY vendor /project/vendor
 WORKDIR /project
 RUN go build -mod=vendor -o /app/main .
+
+# run the action
+FROM alpine:3.7
+COPY --from=build /app/main /app/main
 WORKDIR /app
+CMD /app/main
 
 ENTRYPOINT ["/app/main"]
