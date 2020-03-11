@@ -1,4 +1,4 @@
-module github.com/mx51/github-actions
+module github.com/mx51/version-json-tagging-action
 
 go 1.13
 

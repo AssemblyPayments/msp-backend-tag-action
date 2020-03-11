@@ -1,13 +1,14 @@
 
 GIT_TAG := $(shell git describe)
+DOCKER_IMAGE := mx51io/version-json-tagging-action
 
 .PHONY: build
 build:
 	docker build --rm \
-		-t mx51io/version-json-tagging-action:latest \
-		-t mx51io/version-json-tagging-action:${GIT_TAG} \
+		-t ${DOCKER_IMAGE}:latest \
+		-t ${DOCKER_IMAGE}:${GIT_TAG} \
 		.
 
 .PHONY: push
 push:
-	docker push mx51io/version-json-tagging-action:${GIT_TAG}
+	docker push ${DOCKER_IMAGE}:${GIT_TAG}
