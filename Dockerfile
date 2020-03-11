@@ -1,17 +1,18 @@
-FROM golang:1.13-alpine as build
+FROM golang:1.13-alpine
 
-# build
+# build the action
 RUN mkdir /project
 COPY main.go /project/
 COPY go.* /project/
 COPY vendor /project/vendor
 WORKDIR /project
 RUN go build -mod=vendor -o /app/main .
-
-# run
-FROM alpine:3.7
-COPY --from=build /app/main /app/main
 WORKDIR /app
-CMD /app/main
+
+# # run the action
+# FROM alpine:3.7
+# COPY --from=build /app/main /app/main
+# WORKDIR /app
+# CMD /app/main
 
 ENTRYPOINT ["/app/main"]
