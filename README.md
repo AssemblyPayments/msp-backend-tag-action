@@ -9,4 +9,4 @@ When triggered, it will create an annotated tag with name from `version.json` on
 ## Push to docker hub
 `make push`
 
-You need to have push permission to docker hub mx51io account
+Note: You need to have push permission to docker hub mx51io account
