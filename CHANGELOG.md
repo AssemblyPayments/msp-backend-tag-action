@@ -2,8 +2,7 @@
 
 ## v1.0.0
 
-- refactor folder structure and use mx51io docker repo
-- use single docker file
+- move source code out of the repo
 
 ## v0.0.1
 
