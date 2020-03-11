@@ -1,13 +1,14 @@
 
+GIT_TAG := $(shell git describe)
+
 .PHONY: build
 build:
-	# TODO: replace sandyleo26 with mx51 account name
 	docker build --rm \
-		-f dockerfile.version-json-tagging \
-		-t sandyleo26/version-json-tagging:latest \
+		-f dockerfile.build \
+		-t mx51io/version-json-tagging-action:latest \
+		-t mx51io/version-json-tagging-action:${GIT_TAG} \
 		.
 
 .PHONY: push
 push:
-	# TODO: replace sandyleo26 with mx51 account name
-	docker push sandyleo26/version-json-tagging:latest
+	docker push mx51io/version-json-tagging:latest
