@@ -1,4 +1,4 @@
-FROM golang:1.13-alpine
+FROM golang:1.13-alpine as build
 
 # build and run action
 # we could use a "builder" dockerfile to build the action into a docker image and another dockerfile
