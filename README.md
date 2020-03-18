@@ -1,5 +1,5 @@
 
-## version-json-tagging-action
+## action-auto-tagger
 
 ## Usage
 
@@ -23,7 +23,7 @@ jobs:
         fetch-depth: '0'
 
     - name: Tag master
-      uses: mx51/version-json-tagging-action@master
+      uses: mx51/action-auto-tagger@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
