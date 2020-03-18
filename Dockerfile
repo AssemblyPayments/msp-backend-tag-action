@@ -1,4 +1,4 @@
-FROM mx51io/version-json-tagging-go:v0.0.3
+FROM mx51io/auto-tagger:0.0.4
 
 WORKDIR /app
 

@@ -1,4 +1,4 @@
-name: 'version json tagging'
+name: 'auto tagger'
 description: 'create tag using version from version.json'
 runs:
   using: 'docker'
