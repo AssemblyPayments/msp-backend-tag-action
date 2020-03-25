@@ -1,4 +1,4 @@
-FROM mx51io/auto-tagger:0.0.4
+FROM mx51io/auto-tagger:dev-aw-new-tag-msg-1
 
 WORKDIR /app
 
